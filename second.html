@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание - 2</title>
+</head>
+<body>
+    <h1 style="font-family: sans-serif;">
+        Второе Задание
+    </h1>
+    <h2 style="font-family:sans-serif;">
+        Решение
+    </h2>
+    <h3>
+        function isPrime(number) { <br>
+            if (number <= 1) { <br>
+                return false; <br>
+            } else if (number <= 3) { <br>
+                return true; <br>
+            } else if (number % 2 === 0 || number % 3 === 0) { <br>
+                return false; <br>
+            } <br>
+            <br>
+            let i = 5; <br>
+            while (i * i <= number) {<br>
+                if (number % i === 0 || number % (i + 2) === 0) {<br>
+                    return false;<br>
+                }<br>
+                i += 6;<br>
+            }<br>
+        
+            return true;<br>
+        }<br>
+        
+    </h3>
+</body>
+</html>

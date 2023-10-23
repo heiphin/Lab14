@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Quiz</title>
+</head>
+<body>
+  <div id="quiz1">
+    <h1>JavaScript Quiz 1</h1>
+    <div id="score1">
+      <p>Score: 0</p>
+    </div>
+    <div id="question1">
+      <p>What is 2 + 2?</p>
+      <input type="radio" name="answer1" value="4"> 4
+      <input type="radio" name="answer1" value="5"> 5
+      <input type="radio" name="answer1" value="6"> 6
+      <input type="radio" name="answer1" value="7"> 7
+    </div>
+    <button id="submit1">Submit</button>
+  </div>
+
+  <div id="quiz2">
+    <h1>JavaScript Quiz 2</h1>
+    <div id="score2"> <!-- Исправленная опечатка -->
+      <p>Score: 0</p>
+    </div>
+    <div id="question2">
+      <p>What is 3 + 3?</p>
+      <input type="radio" name="answer2" value="6"> 6
+      <input type="radio" name="answer2" value="7"> 7
+      <input type="radio" name="answer2" value="8"> 8
+      <input type="radio" name="answer2" value="9"> 9
+    </div>
+    <button id="submit2">Submit</button>
+  </div>
+  
+
+  <div id="quiz3">
+    <h1>JavaScript Quiz 3</h1>
+    <div id="score3">
+      <p>Score: 0</p>
+    </div>
+    <div id="question3">
+      <p>Скока будет 2+2*2</p>
+      <input type="radio" name="answer3" value="6"> 6
+      <input type="radio" name="answer3" value="7"> 7
+      <input type="radio" name="answer3" value="8"> 8
+      <input type="radio" name="answer3" value="9"> 9
+    </div>
+    <button id="submit3">Submit</button>
+  </div>
+
+  <script>
+    var score1 = 0;
+    var score2 = 0;
+    var score3 = 0;
+
+    document.getElementById("submit1").addEventListener("click", function() {
+      var answer1 = document.querySelector("input[name='answer1']:checked").value;
+      if (answer1 === "4") {
+        score1++;
+      }
+      document.getElementById("score1").querySelector("p").textContent = "Score: " + score1;
+    });
+
+    document.getElementById("submit2").addEventListener("click", function() {
+      var answer2 = document.querySelector("input[name='answer2']:checked").value;
+      if (answer2 === "6") {
+        score2++;
+      }
+      document.getElementById("score2").querySelector("p").textContent = "Score: " + score2;
+    });
+
+    document.getElementById("submit3").addEventListener("click", function() {
+      var answer3 = document.querySelector("input[name='answer3']:checked").value;
+      if (answer3 === "8") {
+        score3++;
+      }
+      document.getElementById("score3").querySelector("p").textContent = "Score: " + score3;
+    });
+  </script>
+</body>
+</html>
